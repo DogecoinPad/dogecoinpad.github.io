@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>Dogecoin Pad</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+    <script src="https://cdn.babylonjs.com/viewer/babylon.viewer.js"></script>
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+</head>
+
+<body>
+    <div style="position: absolute; top: 10px; left: 10px;z-index: 10000;">
+        <div>
+            <h3>Dogecoin Pad</h3>
+        </div>
+        <div>
+            <p>Microcontroller mini board, Dogecoin inspired</p>
+        </div>
+        <div>
+            <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="https://github.com/DogecoinPad/dogeboard" target="_blank">GitHub</a>
+            <a class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent" href="https://hackaday.io/project/180583-dogecoin-pad" target="_blank">Hackaday</a>
+        </div>
+    </div>
+    <babylon extends="minimal">
+        <model url="images/DogePad.glb">
+            <scaling x="10" y="10" z="10"></scaling>
+        </model>
+        <camera>
+            <behaviors>
+                <auto-rotate type="0"></auto-rotate>
+                <framing type="2" zoomOnBoundingInfo="true" zoomStopsAnimation="false"></framing>
+            </behaviors>
+        </camera>
+        <ground receiveShadows="true"></ground>
+        <engine antialiasing="true"></engine>
+        <scene>
+            <clear-color r=".33" g=".33" , b=".33"></clear-color>
+        </scene>
+    </babylon>
+    <div style="position: absolute; bottom: 10px; right: 10px;z-index: 10000;">
+        <div>
+            <p>Dogecoin Tips Welcome!</p>
+            <p>DJPVM3aWYEUJDCAdRrcSKBnoEFZqfNVPfU</p>
+        </div>
+        <div>
+            <img width="260px" height="280px" style="float: right;" src="images/qr.png" />
+        </div>
+    </div>
+</body>
+
+</html>
